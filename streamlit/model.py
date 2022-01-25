@@ -80,9 +80,9 @@ def table():
 
     
 
-modelstandard = load_pickle('input/size30model.pickle')
-modeltransform = load_pickle('input/size30modeltransform.pickle')
-users = load_pickle('input/userids.pickle')
-games = load_pickle('input/gameids.pickle')
+modelstandard = load_pickle('./input/size30model.pickle')
+modeltransform = load_pickle('./input/size30modeltransform.pickle')
+users = load_pickle('./input/userids.pickle')
+games = load_pickle('./input/gameids.pickle')
 
-df_games = pd.read_csv('input/games_detailed_info_incl_modelid.csv')
+df_games = pd.read_csv('./input/games_detailed_info_incl_modelid.csv')

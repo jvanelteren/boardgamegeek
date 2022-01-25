@@ -3,9 +3,10 @@ import pandas as pd
 pd.options.display.max_rows = 20
 pd.options.display.float_format = "{:,.2f}".format
 pd.options.mode.chained_assignment = None
-
+import os
 from dotproductbias import DotProductBias
 import model
+st.info(os.getcwd())
 def update():
      # refreshes table when filters are changed
      st.session_state['selected_game'] = st.session_state['selected_game']
@@ -61,7 +62,7 @@ st.sidebar.slider(
     "Minimal amount of votes",0,5000, key='minvotes', step=100, on_change=update
 )
 st.sidebar.slider(
-    "Minimum average score",0.,10., value=0.,  key='minaverage', step=0.1, on_change=update, format="%.1f"
+    "Minimum average score",0.,10., key='minaverage', step=0.1, on_change=update, format="%.1f"
 )
 st.sidebar.slider(
     "Weight",0.,5., key='weight', value=[0.,5.], step = 0.1, on_change=update, format="%.1f"
